@@ -1,4 +1,4 @@
-﻿const Discord = require('discord.js');
+const Discord = require('discord.js');
 const fs = require('fs');
 const config = require('./config.json');
 const client = new Discord.Client();
@@ -28,7 +28,7 @@ fs.readdir('./Events/', (error, f) => {
         });
 });
 
-client.login(config.token);
+client.login(process.env.TOKEN);
 
 
 client.on('message', message =>{
